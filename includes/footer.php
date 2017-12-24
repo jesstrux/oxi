@@ -66,15 +66,42 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="js/lib/TweenMax.min.js"></script>
-    <script src="js/lib/ScrollMagic.min.js"></script>
-    <script src="js/lib/sm-animation.gsap.min.js"></script>
-    <script src="js/lib/sm-debug.addIndicators.min.js"></script>
-    <script src="js/lib/instafeed.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGUi2nojUCAB1c-N1EJqkiBLId1hzx_s&callback=initMap">
+    <script>
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                &&
+                location.hostname === this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>

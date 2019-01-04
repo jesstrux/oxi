@@ -1,15 +1,19 @@
-body{
-  --color-green: #149d4b;
-  --color-blue: #1d6dac;
-  --color-orange: #f99928;
-  --color-purple: #592b89;
-  --light-color: #f5f5f5;
+body {
+    --color-green: #149d4b;
+    --color-blue: #1d6dac;
+    --color-orange: #f99928;
+    --color-purple: #592b89;
+    --light-color: #f5f5f5;
 
     font-family: AlegreyaSans Light, sans-serif;
 }
 
-body.locked{
+body.locked {
     overflow: hidden;
+}
+
+.layout{
+    display: flex;
 }
 
 .btn {
@@ -36,7 +40,7 @@ body.locked{
     padding: 6px 16px 7px;
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .btn-large {
         font-size: 18px;
         padding-left: 24px;
@@ -44,7 +48,7 @@ body.locked{
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .btn-large {
         height: 48px;
         font-size: 16px;
@@ -62,154 +66,162 @@ button {
     outline: none !important;
 }
 
-button, input {
+button,
+input {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
 }
 
-#mainNav{
+#mainNav {
     padding: 20px;
     background: transparent;
     z-index: 9;
 }
 
-#navWrapper{
-    max-width: 1300px;
+#navWrapper {
+    padding: 0 20px;
+    max-width: 1110px;
+    margin: auto;
+    /* max-width: 1300px; */
     background: transparent;
 }
 
-#mainLogo{
+#mainLogo {
     color: #fff;
     font-size: 30px;
 }
 
-#mainLogo img{
+#mainLogo img {
     /*width: 100%;*/
     height: 40px;
     margin-left: 30px;
     margin-right: 12px;
 }
 
-#navLinks{
+#navLinks {
     margin-top: 12px;
     margin-right: 20px;
 }
 
-#navLinks a{
+#navLinks a {
     font-family: "FiraSans", sans-serif;
-    color: #b6b6b6;
+    color: #ddd;
     padding: 2px 20px;
     font-size: 16px;
     min-width: 120px;
 }
 
-#navLinks a.active{
-    border-left:none;
+#navLinks a.active {
+    border-left: none;
     color: var(--color-purple);
     color: #fff;
 }
 
-#mainNav.thin{
+#mainNav.thin {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     animation: slideDown 0.35s ease-out;
 }
 
-#mainNav.col.thin{
+#mainNav.col.thin {
     padding: 12px 20px;
 }
 
 @keyframes slideDown {
-    from{
+    from {
         transform: translateY(-110%);
     }
 
-    to{
+    to {
         transform: none;
     }
 }
 
-#mainNav.col.thin #mainLogo{
+#mainNav.col.thin #mainLogo {
     height: 40px;
 }
 
-#mainNav.col.thin #mainLogo img{
+#mainNav.col.thin #mainLogo img {
     height: 40px;
 }
 
-#mainNav.col.thin #navLinks{
+#mainNav.col.thin #navLinks {
     margin-top: 0;
 }
 
-#mainNav.col.thin #navLinks a{
+#mainNav.col.thin #navLinks a {
     font-size: 14px;
     color: #555;
 }
 
-#mainNav.col.thin #navLinks a.active{
+#mainNav.col.thin #navLinks a.active {
     color: var(--color-purple);
 }
 
-.section-container{
+.section-container {
     padding: 3em 20px;
     max-width: 1110px;
     margin: 0 auto;
 }
 
-.section-divider{
-  padding: 8em 6em;
-  height: 350px;
-  background-color: #000;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+.section-divider {
+    padding: 8em 6em;
+    height: 350px;
+    background-color: #000;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.site-section{
-  padding: 8em 6em;
+.site-section {
+    padding: 8em 6em;
 }
 
-.site-section:not(.auto){
+.site-section:not(.auto) {
     min-height: 600px;
 }
 
-.site-section.grey{
+.site-section.grey {
     background: #f5f5f5;
 }
 
-.section-title h1, .section-title  h2{
+.section-title h1,
+.section-title h2 {
     font-family: "Alegreya Bold", sans-serif;
     font-size: 4em;
 }
 
-.section-title h2{
+.section-title h2 {
     font-size: 2.5em;
 }
 
-.section-title p{
+.section-title p {
     font-size: 1.6em;
     font-family: "AlegreyaSans Light", sans-serif;
 }
 
-.section-title h1 + p{
+.section-title h1+p {
     margin-top: 6px;
     margin-left: 6px;
 }
 
 
 /*SECTION BANNER*/
-#sectionBanner{
+#sectionBanner {
     padding: 0;
     overflow: hidden;
     height: 650px;
@@ -219,18 +231,19 @@ input, button, select, textarea {
     -webkit-background-size: cover;
     background-size: cover;
     background-image: url(../images/slides/slide-1.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
-#sectionBanner .section-title{
+#sectionBanner .section-title {
     position: relative;
     height: 100%;
     padding-left: 45%;
     margin-left: auto;
     /*text-align: center;*/
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
-#sectionBanner .section-title h1{
+
+#sectionBanner .section-title h1 {
     color: #fff;
     margin-top: 40px;
     margin-bottom: 12px;
@@ -238,9 +251,10 @@ input, button, select, textarea {
     text-align: left;
     align-content: flex-start;
     font-family: "Alegreya Black", sans-serif;
+    max-width: 600px;
 }
 
-#sectionBanner .section-title p{
+#sectionBanner .section-title p {
     margin-top: -5px;
     margin-bottom: 25px;
     max-width: 88%;
@@ -249,7 +263,7 @@ input, button, select, textarea {
     line-height: 1.1em;
 }
 
-#sectionBanner .section-title .btn{
+#sectionBanner .section-title .btn {
     background: var(--color-purple);
     color: #fff;
     font-family: "Alegreya Bold", sans-serif;
@@ -262,12 +276,12 @@ input, button, select, textarea {
     padding: 12px 24px;
 }
 
-#sectionBanner .section-title button{
+#sectionBanner .section-title button {
     border: none;
     border-radius: 2px;
     color: #fff;
     display: inline-block;
-    font-family: 'Roboto',arial,sans-serif;
+    font-family: 'Roboto', arial, sans-serif;
     font-size: 16px;
     height: 48px;
     letter-spacing: .5px;
@@ -281,7 +295,7 @@ input, button, select, textarea {
     background: var(--color-purple);
 }
 
-#sectionBanner #slides{
+#sectionBanner #slides {
     position: absolute;
     left: 0;
     top: 0;
@@ -289,7 +303,7 @@ input, button, select, textarea {
     height: 100%;
 }
 
-#sectionBanner .slide{
+#sectionBanner .slide {
     position: absolute;
     left: 0;
     top: 0;
@@ -299,60 +313,67 @@ input, button, select, textarea {
     background-size: cover;
 }
 
-.common-section .section-container{
+.common-section .section-container {
     padding: 4.5em 20px;
 }
 
-.common-section .section-title{
+.common-section .section-title {
     text-align: center;
     margin-bottom: 55px;
+    /* color: var(--color-purple) */
 }
 
-.common-section .section-title p{
+.common-section .section-title p {
     max-width: 700px;
     margin: auto;
     margin-top: 12px;
     line-height: 1.3em;
+    color: #000;
 }
 
-.common-section .col-md-6{
+.common-section .col-md-6 {
     margin-bottom: 50px;
 }
 
-.common-section .col-md-6:nth-child(even){
+.common-section .col-md-6:nth-child(even) {
     padding-left: 30px;
 }
 
-.common-section .col-md-6:nth-child(odd){
+.common-section .col-md-6:nth-child(odd) {
     padding-right: 30px;
 }
 
 
-.common-section .row h5{
+.common-section .row h5 {
     font-family: AlegreyaSans bold, sans-serif;
     font-size: 1.35em;
     margin-bottom: 8px;
 }
 
-.common-section .row p{
+.common-section .row p {
     font-size: 1.25em;
     line-height: 1.25em;
 }
 
-#sectionServices .row{
+#sectionServices .row {
     max-width: 1000px;
     margin: auto;
 }
 
-#sectionServices{
+#sectionAbout svg,
+#sectionServices svg {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 1.8em;
+    fill: var(--color-purple)
+}
+
+#sectionServices {
     margin-bottom: -30px;
 }
 
-#sectionTestimonials{
-    /*margin-bottom: -30px;*/
-}
-
-#sectionTestimonials .col-md-6{
+#sectionTestimonials .col-md-6 {
     padding-top: 0;
     margin-bottom: 0;
     padding: 30px 0;
@@ -360,109 +381,129 @@ input, button, select, textarea {
 }
 
 
-#sectionTestimonials .col-md-6 h3{
+#sectionTestimonials .col-md-6 h3 {
     font-size: 1.1em;
 }
 
-#sectionTestimonials .col-md-6 h3 strong{
-    font-family: "Alegreya Bold"
+#sectionTestimonials .col-md-6 svg{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 40px;
+    height: 40px;
+    fill: #eee;
 }
 
-#sectionTestimonials .col-md-6 p{
+#sectionTestimonials .col-md-6:nth-child(odd) svg{
+    left: 0;
+}
+
+#sectionTestimonials .col-md-6 h3 strong {
+    font-family: "Alegreya Bold";
+    color: var(--color-purple);
+}
+
+#sectionTestimonials .col-md-6 p {
     margin-bottom: 30px;
     line-height: 1.6em;
 }
 
-#sectionTestimonials .col-md-6:nth-child(odd){
-    border-right: 1px solid #f4f4f4;
+#sectionTestimonials .col-md-6:nth-child(odd) {
+    border-right: 1px solid #e0e0e0;
     padding-right: 28px;
+    padding-left: 56px;
 }
 
-#sectionTestimonials .col-md-6:nth-child(even){
-    padding-left: 42px;
+#sectionTestimonials .col-md-6:nth-child(even) {
+    padding-left: 72px;
 }
 
-#sectionTestimonials .col-md-6:nth-child(-n + 2){
+#sectionTestimonials .col-md-6:nth-child(-n + 2) {
     padding-top: 20px;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
     padding-bottom: 40px;
 }
 
-#sectionTestimonials .col-md-6:nth-child(n + 2){
+#sectionTestimonials .col-md-6:nth-child(n + 2) {
     padding-bottom: 20px;
 }
 
 /*FOOTER*/
-footer{
+footer {
     /*height: 260px;*/
-}
-
-.footer-wrapper{
     background-color: var(--light-color);
     background-image: url(../images/noise.jpg);
-    padding: 4em 6em;
-    padding-bottom: 1em;
 }
 
-footer #copyright{
-    font-size: 12px;
+.footer-wrapper {
+    padding: 4em 6em;
+    padding: 4em 20px;
+    padding-bottom: 1em;
+    max-width: 1110px;
+    margin: auto;
+}
+
+footer #copyright {
+    font-size: 1.1em;
     color: #ccc;
     padding: 20px 0;
     background: #000;
+    font-family: AlegreyaSans, sans-serif;
 }
 
-footer .highlight{
+footer .highlight {
     color: #fff;
 }
 
-footer #subscribe{
+footer #subscribe {
     padding-right: 40px;
     width: 350px;
     min-width: 350px;
 }
 
-footer #subscribe p{
+footer #subscribe p {
     font-family: "FiraSans", sans-serif;
     font-size: 20px;
     margin-bottom: 8px;
 }
 
 footer #subscribe input,
-footer #subscribe button{
+footer #subscribe button {
     display: inline-block;
 }
 
-footer #subscribe input{
+footer #subscribe input {
     width: 240px;
     padding: 10px 17px;
     font-size: 18px;
 }
 
-footer #subscribe button{
+footer #subscribe button {
     padding: 10px 17px;
     border: 0;
     color: #fff;
     background: var(--color-purple);
 }
 
-#footerNav{
+#footerNav {
     margin-bottom: 25px;
 }
 
-#footerNav h5{
+#footerNav h5 {
     font-family: "FiraSans", sans-serif;
     font-size: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 1em;
 }
 
-#footerNav a{
+#footerNav a {
     font-family: "FiraSans", sans-serif;
     display: inline-block;
-    font-size: 15px;
-    margin-bottom: 8px;
+    font-size: 1.05em;
+    margin-bottom: 0.7em;
+    color: #555;
 }
 
-footer #socialMediaLinks a{
+footer #socialMediaLinks a {
     font-size: 30px;
     margin: 12px;
     margin-top: 0;

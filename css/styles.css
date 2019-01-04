@@ -532,7 +532,11 @@ footer #socialMediaLinks a {
     
     #mainLogo img {
         margin-left: 0;
-    }    
+    }
+
+    .section-title h2 {
+        font-size: 1.8em;
+    }
 
     .common-section .col-md-4,
     .common-section .col-md-6 {
@@ -561,7 +565,7 @@ footer #socialMediaLinks a {
 
     #sectionBanner .section-title p{
         max-width: 100%;
-        font-size: 1.5em;
+        font-size: 1.3em;
         /* font-family: AlegreyaSans, sans-serif; */
     }
     

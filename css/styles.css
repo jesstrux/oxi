@@ -16,6 +16,10 @@ body.locked {
     display: flex;
 }
 
+.layout.wrap{
+    flex-wrap: wrap;
+}
+
 .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -508,4 +512,84 @@ footer #socialMediaLinks a {
     margin: 12px;
     margin-top: 0;
     margin-left: 0;
+}
+
+@media (max-width: 540px) {
+    .for-lg{
+        display: none;
+    }
+
+    #navWrapper {
+        padding: 0;
+    }
+    #mainNav #navLinks{
+        display: none;
+    }
+
+    #mainLogo{
+        margin: 0 auto;
+    }    
+    
+    #mainLogo img {
+        margin-left: 0;
+    }    
+
+    .common-section .col-md-4,
+    .common-section .col-md-6 {
+        margin-bottom: 2.5em;
+    }
+
+    #sectionBanner {
+        height: auto;
+    }
+
+    #sectionBanner .section-title {
+        padding-left: 0;
+        padding: 7.5em 20px;
+        padding-bottom: 3.5em;
+        align-items: center !important;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.64);
+    }
+    
+    #sectionBanner .section-title h1{
+        font-size: 2.5em;
+        text-align: center;
+        font-family: AlegreyaSans, sans-serif;
+        margin-top: 0;
+    }
+
+    #sectionBanner .section-title p{
+        max-width: 100%;
+        font-size: 1.5em;
+        /* font-family: AlegreyaSans, sans-serif; */
+    }
+    
+    #sectionBanner .section-title a{
+        margin: 0 auto !important;
+    }
+
+    #sectionAbout .col-md-4:last-child{
+        margin-bottom: 0;
+    }
+    
+    .common-section .col-md-6:nth-child(even) {
+        padding-left: 0;
+    }
+
+    #sectionTestimonials .col-md-6 {
+        border: none !important;
+    }
+
+    #sectionTestimonials .col-md-6:nth-child(even) {
+        padding-left: 56px;
+    }
+    
+    #sectionTestimonials .col-md-6 svg {
+        left: 0;
+    }
+
+    #footerNav > div:not(:last-child){
+        margin-bottom: 2em;
+    }
 }
